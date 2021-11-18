@@ -1,13 +1,23 @@
 body {
-    background-color: azure;
+    background-color: rgb(25, 112, 112);
     display: flex;
     justify-content: center;
+    align-items: center;
+}
+
+.outerWrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: auto;
 }
 
 .sidebar {
     background-color: slategrey;
-    min-height: 90vh;
     margin: 2.5vh;
+    border-style: ridge;
+    border-radius: 10px;
+    padding: 15px;
 }
 
 .title {
@@ -23,13 +33,53 @@ body {
 .wrapper {
     background-color: rgb(171, 5, 6);
     padding: 15px;
-    border-style: outset;
+    border-style: ridge;
     border-radius: 15px;
     margin: 2.5vh;
     display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    flex: 1;
+    max-height: 90vh;
+    max-width: 90vh;
 }
 
-.container {
+#container {
     border: 3px black solid;
     display: flex;
+    flex: 1 0 auto;
+}
+
+.controls {
+    min-height: 25vh;
+}
+
+.square {
+    margin: 0;
+    flex: 1 1 auto;
+    background-color: white;
+    display: flex;
+    height: auto;
+}
+
+.square:before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+
+.box {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    line-height: 30px;
+    flex: 1;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    flex: auto;
 }
